@@ -1,13 +1,19 @@
 <mat-toolbar color="primary">
 
 	<div class="float-left">
-		<span class="float-left">Desafio Técnico Framework</span>
+		Desafio Técnico Framework
 	</div>
 
-	<div class="d-inline-block float-right">
-		<button mat-flat-button>Posts</button>
-		<button mat-flat-button class="mx-2">Albuns</button>
-		<button mat-flat-button>TO-DOS</button>
+	<span class="fill-space"></span>
+
+	<div>
+		<button mat-flat-button class="px-4" routerLink="/posts">Posts</button>
+		<button mat-flat-button class="mx-3 px-4" routerLink="/albuns">Albuns</button>
+		<button mat-flat-button class="px-4" routerLink="/todos">TO-DOS</button>
 	</div>
 
 </mat-toolbar>
+
+<div class="container-fluid">
+	<router-outlet></router-outlet>
+</div>
