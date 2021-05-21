@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+
 import { PostsComponent } from './posts/posts.component';
 import { AlbunsComponent } from './albuns/albuns.component';
 import { TodosComponent } from './todos/todos.component';
@@ -25,6 +27,7 @@ import { TodosComponent } from './todos/todos.component';
 		BrowserAnimationsModule,
 		MatToolbarModule,
 		MatButtonModule,
+    MatCardModule,
 		HttpClientModule
 	],
 	providers: [],

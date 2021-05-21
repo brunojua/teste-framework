@@ -23,9 +23,10 @@ export class PostsComponent implements OnInit {
 		this.api.getPosts().subscribe(
 			res => {
 				console.log(res);
+        res = res.slice(0, 10);
 				this.posts = res;
 			}, error => {
-				console.log(error);				
+				console.log(error);
 			}
 		)
 	}
