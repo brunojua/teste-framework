@@ -1,1 +1,25 @@
-<p>albuns works!</p>
+<h3 class="mb-4">
+  Albums
+</h3>
+
+<div class="container-fluid">
+
+  <div class="row">
+
+      <div class="col-12 col-sm-6 col-md-4" *ngFor="let album of albums;">
+
+        <div class="mb-4">
+          <mat-card>
+              <mat-card-header>
+                  <mat-card-title>{{ album.title }}</mat-card-title>
+              </mat-card-header>
+
+              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+          </mat-card>
+        </div>
+
+      </div>
+
+  </div>
+
+</div>

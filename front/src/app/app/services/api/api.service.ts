@@ -12,12 +12,22 @@ export class ApiService {
 	constructor(private http: HttpClient) { }
 
 	getPosts(): Observable<any> {
-        return this.http.get<any>(this.baseUrl + 'posts')
-        .pipe(
-            map(data => {
-                data;
-                return data;
-            })
-        );
-    }
+      return this.http.get<any>(this.baseUrl + 'posts')
+      .pipe(
+          map(data => {
+              data;
+              return data;
+          })
+      );
+  }
+
+  getAlbums(): Observable<any> {
+    return this.http.get<any>(this.baseUrl + 'albums')
+    .pipe(
+        map(data => {
+            data;
+            return data;
+        })
+    );
+}
 }
