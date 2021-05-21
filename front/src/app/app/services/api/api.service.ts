@@ -29,5 +29,16 @@ export class ApiService {
             return data;
         })
     );
-}
+  }
+
+  getTodos(): Observable<any> {
+    return this.http.get<any>(this.baseUrl + 'todos')
+    .pipe(
+        map(data => {
+            data;
+            return data;
+        })
+    );
+  }
+
 }

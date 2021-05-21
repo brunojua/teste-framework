@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ApiService } from './../app/services/api/api.service';
+
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  constructor() { }
+  todos: any
+
+  constructor(
+    private api: ApiService
+  ) { }
 
   ngOnInit() {
+    this.getTodos();
   }
+
+  getTodos() {
+		this.api.getTodos().subscribe(
+			res => {
+        res = res.slice(0, 18);
+				this.todos = res;
+			}, error => {
+				console.log(error);
+			}
+		)
+	}
 
 }

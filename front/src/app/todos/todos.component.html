@@ -1,1 +1,23 @@
-<p>todos works!</p>
+<div class="container-fluid">
+
+  <div class="row d-flex justify-content-center">
+
+      <div class="col-12 col-sm-6 col-md-4 text-left">
+
+        <h3>
+          Sua lista de tarefas
+        </h3>
+
+        <div class="mt-4">
+
+          <div class="mb-3" *ngFor="let todo of todos;">
+            <mat-checkbox [(ngModel)]="todo.completed" [value]="todo.completed">{{ todo.title }} </mat-checkbox>
+          </div>
+
+        </div>
+
+      </div>
+
+  </div>
+
+</div>
